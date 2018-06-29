@@ -25,6 +25,7 @@ export default {
 		postcss({
 			extract: true,
 			sourceMap: false,
+			minimize: !isWatch
 		}),
 		buble(),
 		uglify(),
