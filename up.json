@@ -1,0 +1,12 @@
+{
+  "name": "embed-demo-static-grub",
+  "profile": "vidy",
+  "type": "static",
+  "static": {
+    "dir": "public"
+  },
+  "hooks": {
+    "prebuild": "rm -rf public",
+    "build": "npm run build"
+  }
+}
