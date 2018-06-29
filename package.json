@@ -5,6 +5,9 @@
     "build": "rollup -c && taskr build",
     "watch": "rollup -cw"
   },
+  "dependencies": {
+    "zoom-image": "^0.1.4"
+  },
   "devDependencies": {
     "@taskr/htmlmin": "^1.1.0",
     "@taskr/rev": "^1.1.0",

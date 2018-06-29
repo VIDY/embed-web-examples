@@ -1,1 +1,176 @@
-//
+$ff-sans = Arial,sans-serif
+$ff-serif = 'Neuton',serif
+
+*
+	margin 0
+	padding 0
+	&,
+	&:after,
+	&:before
+		box-sizing border-box
+
+html
+	min-height 100%
+	text-size-adjust 100%
+	-moz-osx-font-smoothing grayscale
+	-webkit-font-smoothing antialiased
+	text-rendering optimizelegibility
+	font 16px $ff-sans
+
+::selection
+	background-color rgba(172,202,91,0.5)
+
+ul,ol
+	list-style none
+a
+	text-decoration none
+
+.inner
+	width 100%
+	max-width 1024px
+	margin-right auto
+	margin-left auto
+
+
+.top
+	padding 0
+	width 100%
+	height 23px
+	background #222
+
+	.inner
+		display flex
+		justify-content space-between
+
+	a
+		color #b2b2b2
+		font-size 10px
+		text-transform uppercase
+		&:hover
+			text-decoration underline
+
+
+.banner
+	height 95px
+	padding 7px 10px 0
+	border-bottom 3px solid #ccc
+	display flex
+
+	.logo-wrapper
+		flex 1
+	.logo
+		display block
+		max-width 390px
+
+	.actions
+		display flex
+		align-items center
+		justify-content space-between
+
+
+.content
+	display grid
+	column-gap 22px
+	grid-template-columns 2.5fr 1fr
+	position relative
+	margin-top 30px
+
+	main // article wrapper
+		padding-left 135px
+
+	.sticky
+		position sticky
+		top 44px
+
+article p,
+article li
+	color #111
+	font 400 17px $ff-serif
+	margin-bottom 20px
+	line-height 1.6
+	a
+		color #f85d00
+
+.title
+	color #333
+	line-height 38px
+	margin-bottom 13px
+	font 400 34px $ff-serif
+	letter-spacing -0.1px
+
+.category
+	color #111
+	text-transform uppercase
+	text-decoration none
+	font-weight bold
+	font-size 12px
+
+.byline,
+.meta time
+	font 400 12px $ff-sans
+	line-height 14px
+
+.byline
+	color #333
+	display block
+	margin-bottom 18px
+	a
+		color inherit
+		font-weight 700
+
+.popular
+	padding-left 22px
+	h2, a
+		font 700 15px/16px $ff-serif
+	h2
+		position relative
+		font-style italic
+		&:before
+			content ''
+			z-index -1
+			position absolute
+			border-top 3px solid #acca5b
+			height 10px
+			width 100%
+			top 8px
+			left 0
+		> span
+			padding-right 8px
+			word-wrap break-word
+			background-color #FFF
+	ol
+		margin-top 18px
+	li
+		position relative
+		border-top 1px solid #ddd
+		padding 20px 0 18px 30px
+		&:before
+			left 0
+			width 11px
+			height 20px
+			position absolute
+			font 700 italic 22px/1 $ff-serif
+			text-align center
+		&:first-of-type
+			border-top none
+		for idx in (1..5)
+			&:nth-of-type({idx}):before
+				content '"%d."' % idx
+	a
+		color #000
+		line-height 1.35
+
+
+.image
+	margin-top 5px
+	margin-bottom 21px
+	img
+		max-width 100%
+	figcaption
+		color #353535
+		font 400 11px/13px $ff-sans
+		text-align center
+		margin-top 5px
+	cite
+		display block
+		color #888
