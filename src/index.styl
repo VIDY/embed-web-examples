@@ -1,6 +1,8 @@
 $ff-sans = Arial,sans-serif
 $ff-serif = 'Neuton',serif
 
+$lime = #ACCA5B
+
 *
 	margin 0
 	padding 0
@@ -56,17 +58,26 @@ a
 	border-bottom 3px solid #ccc
 	display flex
 
-	.logo-wrapper
-		flex 1
-	.logo
-		display block
-		max-width 390px
+.logo-wrapper
+	flex 1
+.logo
+	display block
+	max-width 390px
 
-	.actions
-		display flex
-		align-items center
-		justify-content space-between
-
+.actions
+	display flex
+	align-items center
+	justify-content space-between
+	&.mobile
+		display none
+		button
+			border none
+			background none
+			cursor pointer
+			width 65px
+		svg
+			height 18px
+			width 18px
 
 .content
 	display grid
@@ -129,7 +140,7 @@ article li
 			content ''
 			z-index -1
 			position absolute
-			border-top 3px solid #acca5b
+			border-top 3px solid $lime
 			height 10px
 			width 100%
 			top 8px
@@ -165,6 +176,7 @@ article li
 	margin-top 5px
 	margin-bottom 21px
 	img
+		width 100%
 		max-width 100%
 	figcaption
 		color #353535
@@ -174,3 +186,43 @@ article li
 	cite
 		display block
 		color #888
+
+
+@media screen and (max-width: 1024px)
+	.top
+		display none
+	.banner
+		height 75px
+		display flex
+		align-items center
+		border-top 2px solid $lime
+		padding 0 18px
+	.logo
+		max-width 272px
+	.actions.links
+		display none
+	.actions.mobile
+		display flex
+		button
+			height 75px
+	.content
+		column-gap 0
+		grid-template-columns 1fr
+		main
+			width 100%
+			padding-left 8.75%
+			padding-right 8.75%
+		aside
+			display none
+
+@media screen and (max-width: 769px)
+	.banner
+		height 48px
+	.actions.mobile button
+		height 48px
+		width 41px
+	.logo
+		width 180px
+	.content main
+		padding-left 20px
+		padding-right 20px
