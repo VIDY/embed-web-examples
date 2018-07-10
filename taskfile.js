@@ -14,5 +14,7 @@ module.exports = {
 		yield task.source(`${dest}/{bundle,rev-*}.*`).run({}, function * (f) {
 			unlinkSync(resolve(f.dir, f.base));
 		});
+		// copy editor file
+		yield task.source('src/embed.edits.js').target(dest);
 	}
 }
