@@ -1,7 +1,5 @@
 node_modules
+*-lock.json
 .DS_Store
 *.lock
 *.log
-package-lock.json
-
-public
