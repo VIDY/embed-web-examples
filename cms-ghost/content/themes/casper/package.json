@@ -1,8 +1,8 @@
 {
-    "name": "casper",
+    "name": "casper-vidy",
     "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
     "demo": "https://demo.ghost.io",
-    "version": "2.3.3",
+    "version": "2.3.3-vidy",
     "engines": {
         "ghost": ">=1.2.0"
     },
