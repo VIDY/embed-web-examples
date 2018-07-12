@@ -15,6 +15,6 @@ module.exports = {
 			unlinkSync(resolve(f.dir, f.base));
 		});
 		// copy editor file
-		yield task.source('src/embed.edits.js').target(dest);
+		yield task.source('node_modules/@vidy-dev/embed/dist/embed.edits.js').target(dest);
 	}
 }

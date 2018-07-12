@@ -5,6 +5,7 @@
     "watch": "rollup -cw"
   },
   "dependencies": {
+    "@vidy-dev/embed": "^0.0.0",
     "zoom-image": "^0.1.4"
   },
   "devDependencies": {

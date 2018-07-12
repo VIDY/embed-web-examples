@@ -1,7 +1,7 @@
-import zoom from 'zoom-image';
-import Vidy from './vidy';
 import './index.styl';
-import './vidy.css';
+import zoom from 'zoom-image';
+import Vidy from '@vidy-dev/embed';
+import '@vidy-dev/embed/dist/embed.css';
 
 let i=0, list=document.querySelectorAll('.image img');
 while (i < list.length) zoom(list[i++]);
