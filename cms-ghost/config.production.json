@@ -1,0 +1,19 @@
+{
+  "url": "https://ghost.demo.vidy.com",
+  "database": {
+    "client": "sqlite3",
+    "connection": {
+      "filename": "content/data/ghost.db"
+    },
+    "debug": false
+  },
+  "auth": {
+    "type": "password"
+  },
+  "paths": {
+    "contentPath": "content/"
+  },
+  "logging": {
+    "transports": ["stdout"]
+  }
+}
