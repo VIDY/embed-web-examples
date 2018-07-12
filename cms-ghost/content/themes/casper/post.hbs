@@ -60,6 +60,23 @@ into the {body} of the default.hbs template --}}
 
             </footer>
 
+            {{!-- Add Vidy Embed SDK --}}
+            {{#contentFor "styles"}}
+              <link rel="stylesheet" href="https://unpkg.com/@vidy-dev/embed@0.0.0/dist/embed.css" defer="true">
+            {{/contentFor}}
+            {{#contentFor "scripts"}}
+              <script src="https://unpkg.com/@vidy-dev/embed@0.0.0/dist/embed.min.js"></script>
+              <script>
+                var vidy = new Vidy({
+                  appid: '33c65dc4-08fa-4246-b2b4-3ceb35cc927b',
+                  // replace leading & trailing "/" to avoid invalid API request
+                  postid: '{{ url }}'.replace(/^\/|\/$/g, ''),
+                  content: '.post-full-content',
+                  autoload: true
+                });
+              </script>
+            {{/contentFor}}
+
             {{!--
             <section class="post-full-comments">
                 If you want to embed comments, this is a good place to do it!
