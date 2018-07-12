@@ -2,10 +2,12 @@
   "private": true,
   "scripts": {
     "build": "rollup -c && taskr build",
+    "start": "sirv public",
     "watch": "rollup -cw"
   },
   "dependencies": {
     "@vidy-dev/embed": "^0.0.0",
+    "sirv-cli": "^0.1.3",
     "zoom-image": "^0.1.4"
   },
   "devDependencies": {
