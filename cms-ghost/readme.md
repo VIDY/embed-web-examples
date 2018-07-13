@@ -52,10 +52,10 @@ Then open `http://localhost:2368/` in a web browser! :tada:
 
 Ghost ships with an embedded version of the Casper theme. You will need to upload the modified theme (included) to your Ghost application.
 
-1. Create a ZIP archive of the `themes/casper` directory, and name it `casper-vidy`.
+1. Create a ZIP archive of the `themes/casper-vidy` directory and name it `casper-vidy`.
 
     ```sh
-    $ tar czf casper-vidy.zip themes/casper
+    $ tar czf casper-vidy.zip content/themes/casper-vidy
     ```
 
 2. Upload and Activate the new theme~!

@@ -11,7 +11,7 @@
     "type": "password"
   },
   "paths": {
-    "contentPath": "content/"
+    "contentPath": "content"
   },
   "privacy": {
     "useRpcPing": false,
