@@ -62,10 +62,10 @@ into the {body} of the default.hbs template --}}
 
             {{!-- Add Vidy Embed SDK --}}
             {{#contentFor "styles"}}
-              <link rel="stylesheet" href="https://unpkg.com/@vidy-dev/embed@0.0.0/dist/embed.css" defer="true">
+              <link rel="stylesheet" href="https://unpkg.com/@vidy-dev/embed@beta/dist/embed.css" defer="true">
             {{/contentFor}}
             {{#contentFor "scripts"}}
-              <script src="https://unpkg.com/@vidy-dev/embed@0.0.0/dist/embed.min.js"></script>
+              <script src="https://unpkg.com/@vidy-dev/embed@beta/dist/embed.min.js"></script>
               <script>
                 var vidy = new Vidy({
                   appid: '33c65dc4-08fa-4246-b2b4-3ceb35cc927b',
