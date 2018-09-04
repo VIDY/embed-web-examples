@@ -2,7 +2,7 @@
 
 An example that shows how you can connect the Vidy SDK to your Ghost-powered website.
 
-We used external CDN links for this approach, appending them inside the `post.hbs` template file. Alternatively, if you are building your own theme assets, you may also include the [`@vidy-dev/embed`](https://github.com/VIDY/embed.js) module into your build system directly.
+We used external CDN links for this approach, appending them inside the `post.hbs` template file. Alternatively, if you are building your own theme assets, you may also include the [`@vidy/embed`](https://github.com/VIDY/embed.js) module into your build system directly.
 
 You will also find the SDK initiation script inside the `post.hbs` template:
 
