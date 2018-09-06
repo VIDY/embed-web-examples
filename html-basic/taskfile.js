@@ -27,7 +27,10 @@ module.exports = {
 	*style(task) {
 		// process stylus & concat with Vidy styles
 		yield task.source('src/index.styl').stylus({ compress:true }).target('src');
-		yield task.source('src/*.css').concat('bundle.css').target(dest);
+		yield task.source([
+			'src/index.css',
+			'node_modules/@vidy/embed/dist/embed.css'
+		]).concat('bundle.css').target(dest);
 		yield task.clear('src/index.css'); // generated
 	},
 
