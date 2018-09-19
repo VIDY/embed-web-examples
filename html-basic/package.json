@@ -6,7 +6,7 @@
     "watch": "taskr watch"
   },
   "dependencies": {
-    "@vidy/embed": "^0.2.0",
+    "@vidy/embed": "^0.3.0",
     "sirv-cli": "^0.1.3",
     "zoom-image": "^0.1.4"
   },
