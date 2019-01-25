@@ -2,7 +2,8 @@
 
 > A few examples and guides of various web technologies pairing with the Vidy SDK
 
-:bulb: Looking for documentation? Visit the [JavaScript SDK](https://github.com/VIDY/embed.js) repository~!
+:bulb: Check out [Vidy's JavaScript SDK Documentation](/docs)~!
+<!-- :bulb: Looking for documentation? Visit the [JavaScript SDK](https://github.com/VIDY/embed.js) repository~! -->
 
 ## Examples
 
