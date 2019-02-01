@@ -29,6 +29,7 @@
 	* [Embed and Publish](#3-embed-and-publish-vidys-onto-a-page)
 * [Application ID and PostID](#application-id-and-postid)
 * [Dynamic Vidy SDK installation](#advanced-dynamic-installation)
+  * :bulb: [Examples](https://github.com/VIDY/embed-web-examples)!
 * [Browser Support](#browser-support)
 
 
