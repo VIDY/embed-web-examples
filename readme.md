@@ -15,7 +15,7 @@
   [View Source](/cms-ghost) · [Live Demo](#) <br>
   _Example using [Ghost CMS](https://ghost.org/) and its default [Casper](https://github.com/TryGhost/Casper) theme._
 
-* **simple-hbs-dynamic**<br>
+* **simple-hbs-multiple-pages**<br>
   [View Source](/simple-hbs-dynamic) · Run on local machine for live demo. This demonstrates using hbs partial templates to integrate SDK into multiple pages at once while providing each page with a ***unique*** ```postid```.
 ## License
 
