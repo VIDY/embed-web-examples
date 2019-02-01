@@ -40,9 +40,10 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
 * <a href = 'https://dashboard.vidy.com/register'>Register Link</a>
 * Once registered, visit your dashboard
 	*  <a href = "https://dashboard.vidy.com/">Dashboard Link</a>
-*  Create a new Application (**APP**) and give it a name. 
+*  Create a new Application (**APP**) and give it a name.
 	* Take note of the **app id** that is created, however all of your **app ids** can be found on the settings section under ```APPLICATIONS``` 
 	 * <a href="https://dashboard.vidy.com/settings/applications">Settings/applications link</a>
+   * NOTE: You can create and maintain more than one Application at a time.
 * Visit [Application ID and PostID](#application-id-and-postid) for the importance of the APP_ID and PostID
 ### 2. Install the Vidy SDK onto your page.
 
