@@ -24,12 +24,12 @@
 
 # Table of Contents:
 * [Usage](##Usage)
-	* [Register](####1.-Register-with-Vidy-and-Create-a-Dashboard-Account)
-	* [Install](####2.-Install-the-Vidy-SDK-onto-your-page)
-	* [Embed and Publish](####3.-Embed-and-Publish-Vidys-onto-a-Page)
-* [Application ID and PostID](###-Application-ID-and-POSTID)
-* [Dynamic Vidy SDK installation](##-Dynamic-Vidy-Installation)
-* [Browser Support](##-Browser-Support)
+	* [Register](#1-register-with-vidy-and-create-a-dashboard-account)
+	* [Install](#2-install-the-vidy-sdk-onto-your-page)
+	* [Embed and Publish](#3-embed-and-publish-vidys-onto-a-Page)
+* [Application ID and PostID](#application-id-and-postid)
+* [Dynamic Vidy SDK installation](#dynamic-vidy-installation)
+* [Browser Support](#browser-support)
 
 
 
