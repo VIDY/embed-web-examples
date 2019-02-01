@@ -139,7 +139,7 @@ Similarly no one else besides you and your dashboard account can add Vidys to yo
 ```html
 <script>
 let vidy = new Vidy({
-  		   appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
+         appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
   *----> postid: 'some-unique-slug-identifier', 
   ....
 	</script>
