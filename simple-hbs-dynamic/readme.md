@@ -1,4 +1,4 @@
-# simple-hbs-Multiple-Pages Demo
+# simple-hbs-multiple-pages Demo
 
 This exteremly simple example is of 3 pages rendered with HBS on a local host node.js server. 
 
