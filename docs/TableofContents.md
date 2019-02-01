@@ -26,16 +26,16 @@
 * [Usage](##Usage)
 	* [Register](#1-register-with-vidy-and-create-a-dashboard-account)
 	* [Install](#2-install-the-vidy-sdk-onto-your-page)
-	* [Embed and Publish](#3-embed-and-publish-vidys-onto-a-Page)
+	* [Embed and Publish](#3-embed-and-publish-vidys-onto-a-page)
 * [Application ID and PostID](#application-id-and-postid)
-* [Dynamic Vidy SDK installation](#dynamic-vidy-installation)
+* [Dynamic Vidy SDK installation](#advanced-dynamic-installation)
 * [Browser Support](#browser-support)
 
 
 
 ## Usage
 To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
-#### 1. Register with Vidy and Create a Dashboard Account
+### 1. Register with Vidy and Create a Dashboard Account
 * <a href = 'https://dashboard.vidy.com/register'>Register Link</a>
 * Once registered, visit your dashboard
 	*  <a href = "https://dashboard.vidy.com/">Dashboard Link</a>
@@ -43,9 +43,10 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
 * INSERT APP_CREATION.PNG here
 	* Take note of the **app id** that is created, however all of your **app ids** can be found on the settings section under ```APPLICATIONS``` 
 	 * <a href="https://dashboard.vidy.com/settings/applications">Settings/applications link</a>
-* Visit [Application ID and PostID](###Application\ ID\ and\ POSTID) for the importance of the APP_ID and PostID
-#### 2. Install the Vidy SDK onto your page.
-* There are many ways to do this. Visit [Install Vidy Embed](#INSTALL) for more technical methods. 
+* Visit [Application ID and PostID](#application-id-and-postid) for the importance of the APP_ID and PostID
+### 2. Install the Vidy SDK onto your page.
+
+*****This is a a very simple, one page, integration setup with the purpose of gaining general understanding of the SDK. For more dynamic and advanced methods of intergration of the SDK onto multiple pages or entire domains, please visit [Advanced Dynamic Installation](#advanced-dynamic-installation)*****
 
 ***basic setup***
  1. Install the Vidy SDK script directly into your HTML
@@ -75,7 +76,7 @@ let vidy = new Vidy({
 1. _This basic installation assumes your text content exists on your page when the Vidy instance is created_
 2. Your ```appid``` and ```postid``` are critical to the successful integration of the Vidy SDK. Please Visit [Application ID and PostID](##Application-ID-and-POSTID) for a detailed explanation of these options.   
 	
-#### 3. Embed and Publish Vidys onto a Page
+### 3. Embed and Publish Vidys onto a Page
 #####  This works much better with the Vidy Dashboard desktop app
 <a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-mac.zip">Vidy Dashboard Download [MAC]<a>
 
@@ -88,7 +89,7 @@ let vidy = new Vidy({
 	1. visit the upload section of your dashboard and upload your videos. 
 		* This can be found under the Upload section of the Desktop app or <a href="https://dashboard.vidy.com/upload/info">Upload Section</a> on the web. 
 		* Upload your Video, Enter the title, tags, and subtitle information for the video. These must be filled out as these will be used to search for the uploaded video at embed time. 
-		* UPLOAD PNG HERE
+		* upload image here
 2. **Embed your videos**
 	1. Visit the ```Preview``` section of the your dashboard and enter your page URL at the top
 	   * <a href="https://dashboard.vidy.com/preview">Preview Section Link</a> for web
@@ -216,7 +217,7 @@ The selector of the parent container that wraps the text content Vidy should tra
 
 	    
     
-## Dynamic Vidy Installation Guideline
+## Advanced Dynamic Installation
 
 ```
 $ npm install --save @vidy/embed
