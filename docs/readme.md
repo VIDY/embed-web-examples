@@ -207,7 +207,7 @@ Required: `true`
 
 The unique identifier for any given page.
 
-Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the location.pathname, if necessary.
+Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary.
 
 
 #### content
