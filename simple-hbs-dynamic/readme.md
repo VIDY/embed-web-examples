@@ -1,8 +1,8 @@
-# simple-hbs-dynamic Demo
+# simple-hbs-Multiple-Pages Demo
 
 This exteremly simple example is of 3 pages rendered with HBS on a local host node.js server. 
 
-The Vidy SDK is dynamically placed on each of the pages via a HBS partial template that is injected into each of the pages.
+The Vidy SDK is placed on each of the pages via a HBS partial template that is injected into each of the pages.
 
 The method of integration allows for the VIDY SDK code to live in one place but be present on all pages while also injecting 
 each page SDK integration with thier own UNIQUE postid. 
