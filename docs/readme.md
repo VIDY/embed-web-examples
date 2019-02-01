@@ -210,6 +210,7 @@ The unique identifier for any given page.
 
 Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary.
 
+***POSTID and APPID combination are what allows for the SDK to find the Vidys associated to each page.***
 
 #### content
 Type: String<br>
