@@ -23,7 +23,7 @@
 
 
 # Table of Contents:
-* [Usage](##Usage)
+* [Usage](#usage)
 	* [Register](#1-register-with-vidy-and-create-a-dashboard-account)
 	* [Install](#2-install-the-vidy-sdk-onto-your-page)
 	* [Embed and Publish](#3-embed-and-publish-vidys-onto-a-page)
@@ -89,7 +89,7 @@ let vidy = new Vidy({
 	1. visit the upload section of your dashboard and upload your videos. 
 		* This can be found under the Upload section of the Desktop app or <a href="https://dashboard.vidy.com/upload/info">Upload Section</a> on the web. 
 		* Upload your Video, Enter the title, tags, and subtitle information for the video. These must be filled out as these will be used to search for the uploaded video at embed time. 
-		* upload image here
+		![upload section image](../images/Upload_section.png)
 2. **Embed your videos**
 	1. Visit the ```Preview``` section of the your dashboard and enter your page URL at the top
 	   * <a href="https://dashboard.vidy.com/preview">Preview Section Link</a> for web
@@ -98,6 +98,7 @@ let vidy = new Vidy({
 		* Change the search to find the uploaded video you wish to embed.
 	5. Once You found the video you want, hit the ```+``` on the right corner and your video is now embeded.
 		* Your highlighted text should now be highlighted pink to signify it is now an embeded text and your a list of all your embeds on the current page will be on the right. 
+    ![embed image](../images/embed_section.png)
 3. **Publish your embeded clips as Vidys live on the web**. 
 	1. If your preview is the way you want it, hit ```PUBLISH``` on the right corner of the preview section tab and you're DONE 	
 	2. Your clips have been successfully embeded as Vidys on your page and they are live on the web! To view them live, simply navigate to your page on any broswer and watch your Vidys spice up your page and watch your traffic interact with your Vidys!
@@ -140,7 +141,7 @@ Similarly no one else besides you and your dashboard account can add Vidys to yo
 <script>
 let vidy = new Vidy({
   		   appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
-  *------> postid: 'some-unique-slug-identifier', 
+  *----> postid: 'some-unique-slug-identifier', 
   ....
 	</script>
 ```
@@ -213,10 +214,9 @@ Most web frameworks have built-in helpers to generate & ensure unique page ident
 Type: String<br>
 Default: 'body'
 
-The selector of the parent container that wraps the text content Vidy should traverse.
+The html selector of the parent container that wraps the text content Vidy should traverse.
 
-	    
-    
+
 ## Advanced Dynamic Installation
 
 ```
