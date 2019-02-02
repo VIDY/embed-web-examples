@@ -186,6 +186,12 @@ yielding this page's HTML script for Vidy instantiation to look like:
 
 In the examples above, notice how the two different pages share the same **appid** because they from the same website. However, each of the page's **postid** is ***unique*** causing they're Vidy instantiation **postid** to be different
 
+##### IMPORTANT POSTID FACTS
+* once your postid for a page is set and vidys are embeded onto a page, do not change the postid. Doing so will result in a loss of your vidy embeds. 
+* The postid should be IMMUTABLE, meaning never changing once it has been set for a page. 
+* There cannot be two identical postid under the same application.
+* The postid can be numbers or text (see below)
+
 #### APPID, POSTID, and Content API GUIDELINE
 #### appid:
 Type: `String`<br>
@@ -200,7 +206,7 @@ Required: `true`
 
 The unique identifier for any given page.
 
-Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary.
+Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary. However, a change in your pages url will result in a different postid if ```location.pathname``` is used and ultimately a loss of that pages Vidy embeds. 
 
 ***POSTID and APPID combination are what allows for the SDK to find the Vidys associated to each page.***
 
