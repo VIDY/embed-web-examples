@@ -48,7 +48,7 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
 * Visit [Application ID and PostID](#application-id-and-postid) for the importance of the APP_ID and PostID
 ### 2. Install the Vidy SDK onto your page.
 
-*****This is a a very simple, one page, integration setup with the purpose of gaining general understanding of the SDK. For more dynamic and advanced methods of intergration of the SDK onto multiple pages or entire domains, please visit [Advanced Dynamic Installation](#advanced-dynamic-installation)*****
+*****This is a a very simple, one page, integration setup with the purpose of gaining general understanding of the SDK. For more dynamic and advanced intergration methods of the SDK onto pages who's text is rendered dynamically or after SDK script execution please visit [Advanced Dynamic Installation](#advanced-dynamic-installation)*****
 
 ***basic setup***
  1. Install the Vidy SDK script directly into your HTML
