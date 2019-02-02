@@ -96,9 +96,9 @@ let vidy = new Vidy({
 		* Change the search to find the uploaded video you wish to embed.
 	5. Once You found the video you want, hit the ```+``` on the right corner and your video is now embeded.
 		* Your highlighted text should now be highlighted pink to signify it is now an embeded text and your a list of all your embeds on the current page will be on the right. 
-    <img src = "https://i.imgur.com/MDisvbv.png">
+    <img src = "https://i.imgur.com/MDisvbv.png" width="600px">
 3. **Publish your embeded clips as Vidys live on the web**. 
-	1. If your preview is the way you want it, hit ```PUBLISH``` on the right corner of the preview section tab and you're DONE 	
+	1. If your preview is the way you want it, hit `PUBLISH` on the right corner of the preview section tab and you're DONE 	
 	2. Your clips have been successfully embeded as Vidys on your page and they are live on the web! To view them live, simply navigate to your page on any broswer and watch your Vidys spice up your page and watch your traffic interact with your Vidys!
 
 
@@ -118,7 +118,7 @@ The **appid** field in the Vidy constructor is the same APP ID that is found on 
 
 The **appid** is used to group pages together into a single application. Simply speaking, an **APPLICATION** is a  ***website*** and the **appid** is the ***website identifier*** 
 
-Examples:
+Examples: (FAKE VALUES)
 
 https://www.washingtonpost.com/ may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
 
@@ -142,11 +142,11 @@ let vidy = new Vidy({
 
 The **postid** is the page identifier. Each page of a website must have their own **UNIQUE** **postid**.
 
-If we continue from our above examples
+If we continue from our above examples:
 
 https://www.washingtonpost.com/ may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
 
-and  page from the WashingtonPost website:
+and a page from the WashingtonPost website:
 
 https://www.washingtonpost.com/opinions/2019/01/31/what-democrats-are->missing/?utm_term=.b26d79555a08
 
@@ -158,8 +158,8 @@ yielding this page's HTML script for Vidy instantiation to look like:
 >```html
 ><script>
 >let vidy = new Vidy({
->appid: '2199e8c8-abcd-efgh-a123-d463129790c5', //Fake WashingtonPost APPID  
->postid: 'what-democrats-are-missing', //UNIQUE page identifier 
+>appid: '2199e8c8-abcd-efgh-a123-d463129790c5', //SAME WashingtonPost APPID  
+>postid: 'what-democrats-are-missing', //UNIQUE page identifier <---------
 >//content:#article if content field used
 >autoload: true
 >  });
@@ -177,7 +177,7 @@ yielding this page's HTML script for Vidy instantiation to look like:
 ><script>
 >let vidy = new Vidy({
 >appid: '2199e8c8-abcd-efgh-a123-d463129790c5', //SAME WashingtonPost APPID  
->postid: "ultra-rich-over-tax", //UNIQUE page identifier 
+>postid: "ultra-rich-over-tax", //UNIQUE page identifier <------------
 >  //content:#article if content field used
 >  autoload: true
 >  });
