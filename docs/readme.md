@@ -20,8 +20,6 @@
 <div align="center">The JavaScript SDK for Vidy Embeds</div>
 
 
-
-
 # Table of Contents:
 * [Usage](#usage)
 	* [Register](#1-register-with-vidy-and-create-a-dashboard-account)
@@ -91,10 +89,10 @@ let vidy = new Vidy({
 2. **Embed your videos**
 	1. Visit the ```Preview``` section of the your dashboard and enter your page URL at the top
 	   * <a href="https://dashboard.vidy.com/preview">Preview Section Link</a> for web
-	3. Highlight the text on your page you wish to embed
+	2. Highlight the text on your page you wish to embed
 		* The search bar (on the left) will be immediately populated with the highlighted text.
 		* Change the search to find the uploaded video you wish to embed.
-	5. Once You found the video you want, hit the ```+``` on the right corner and your video is now embeded.
+	3. Once You found the video you want, hit the ```+``` on the right corner and your video is now embeded.
 		* Your highlighted text should now be highlighted pink to signify it is now an embeded text and your a list of all your embeds on the current page will be on the right. 
     <img src = "https://i.imgur.com/MDisvbv.png" width="600px">
 3. **Publish your embeded clips as Vidys live on the web**. 
@@ -105,30 +103,28 @@ let vidy = new Vidy({
 
 
 ## Application ID and POSTID
+
 #### Understanding the APP ID
 ```html
 <script>
 let vidy = new Vidy({
-   appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // <------
-   postid: 'some-unique-slug-identifier', 
-  ....
-	</script>
+  appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // <------
+  postid: 'some-unique-slug-identifier',
+  // ...
+});
+</script>
 ```
+
 The **appid** field in the Vidy constructor is the same APP ID that is found on your Vidy Dashboard.
 
 The **appid** is used to group pages together into a single application. Simply speaking, an **APPLICATION** is a  ***website*** and the **appid** is the ***website identifier*** 
 
 Examples: (FAKE VALUES)
 
-https://www.washingtonpost.com/ may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
+* `https://www.washingtonpost.com/`'s appid may be `2199e8c8-abcd-efgh-a123-d463129790c5`
+* `https://www.nytimes.com/`'s appid may be `9921c8e8-klmn-opqr-b456-c236181973d4`
 
-while
-
-https://www.nytimes.com/ may have an appid: '9921c8e8-klmn-opqr-b456-c236181973d4' 
-
-The **appid** belongs to a specific dashboard account, therefore you cannot add Vidys to an Application (website) you do not own.
-
-Similarly no one else besides you and your dashboard account can add Vidys to your Application (website) even if they possess your **appid**
+The **appid** belongs to a specific account, which means that you cannot add Vidys to an Application (aka, website) that you do not own. Similarly, others cannot add or modify Vidys on _your_ Application – even if they know your **appid** value!
 
 #### Understanding the POSTID
 ```html
@@ -136,58 +132,55 @@ Similarly no one else besides you and your dashboard account can add Vidys to yo
 let vidy = new Vidy({
   appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
   postid: 'some-unique-slug-identifier', // <------
-  ....
-	</script>
+  // ...
+});
+</script>
 ```
 
 The **postid** is the page identifier. Each page of a website must have their own **UNIQUE** **postid**.
 
 If we continue from our above examples:
 
-https://www.washingtonpost.com/ may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
+`https://www.washingtonpost.com/` may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
 
 and a page from the WashingtonPost website:
 
-https://www.washingtonpost.com/opinions/2019/01/31/what-democrats-are->missing/?utm_term=.b26d79555a08
-
-may have postid: 'what-democrats-are-missing'  <------ UNQIUE POSTID
+`https://www.washingtonpost.com/opinions/2019/01/31/what-democrats-are->missing/?utm_term=.b26d79555a08` may have postid: `'what-democrats-are-missing'`  <------ UNQIUE POSTID
 
 
 
-yielding this page's HTML script for Vidy instantiation to look like:
->```html
-><script>
->let vidy = new Vidy({
->appid: '2199e8c8-abcd-efgh-a123-d463129790c5', //SAME WashingtonPost APPID  
->postid: 'what-democrats-are-missing', //UNIQUE page identifier <---------
->//content:#article if content field used
->autoload: true
->  });
-></script>
->```
+The Vidy SDK script for this page might look like this:
+
+```html
+<script>
+  let vidy = new Vidy({
+    appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // Washington Post's APPID  
+    postid: 'what-democrats-are-missing', // the UNIQUE page identifier
+  });
+</script>
+```
 
 ***A different Page from the same website, WashingtonPost***
 
-https://www.washingtonpost.com/business/2019/01/31/an-angry-historian-ripped-ultra-rich-over-tax-avoidance-davos-then-one-was-given-mic/?utm_term=.638ecb85827a
+`https://www.washingtonpost.com/business/2019/01/31/an-angry-historian-ripped-ultra-rich-over-tax-avoidance-davos-then-one-was-given-mic/?utm_term=.638ecb85827a`
 
-may have a postid:"ultra-rich-over-tax" <--- POSTID
+may have a postid: `'ultra-rich-over-tax'` <--- POSTID
 
-yielding this page's HTML script for Vidy instantiation to look like:
->```html
-><script>
->let vidy = new Vidy({
->appid: '2199e8c8-abcd-efgh-a123-d463129790c5', //SAME WashingtonPost APPID  
->postid: "ultra-rich-over-tax", //UNIQUE page identifier <------------
->  //content:#article if content field used
->  autoload: true
->  });
-></script>
->```
+The Vidy SDK script for this page might look like this:
+
+```html
+<script>
+  let vidy = new Vidy({
+    appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // Washington Post's APPID  
+    postid: 'ultra-rich-over-tax', // the UNIQUE page identifier
+  });
+</script>
+```
 
 In the examples above, notice how the two different pages share the same **appid** because they from the same website. However, each of the page's **postid** is ***unique*** causing they're Vidy instantiation **postid** to be different
 
 ##### IMPORTANT POSTID FACTS
-* once your postid for a page is set and vidys are embeded onto a page, do not change the postid. Doing so will result in a loss of your vidy embeds. 
+* Once your postid for a page is set and vidys are embeded onto a page, do not change the postid. Doing so will result in a loss of your vidy embeds. 
 * The postid should be IMMUTABLE, meaning never changing once it has been set for a page. 
 * There cannot be two identical postid under the same application.
 * The postid can be numbers or text (see below)
