@@ -76,15 +76,11 @@ let vidy = new Vidy({
 **NOTES** 
 
 1. _This basic installation assumes your text content exists on your page when the Vidy instance is created_
-2. Your ```appid``` and ```postid``` are critical to the successful integration of the Vidy SDK. Please Visit [Application ID and PostID](##Application-ID-and-POSTID) for a detailed explanation of these options.   
+2. Your **appid** and **postid** are critical to the successful integration of the Vidy SDK. Please Visit [Application ID and PostID](##Application-ID-and-POSTID) for a detailed explanation of these options.   
 	
 ### 3. Embed and Publish Vidys onto a Page
 #####  This works much better with the Vidy Dashboard desktop app
-<a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-mac.zip">Vidy Dashboard Download [MAC]<a>
-
-<a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-linux.zip">Vidy Dashboard Download [Linux]<a>
-
-<a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-win.zip">Vidy Dashboard Download [Windows]<a>
+<a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-mac.zip">Vidy Dashboard Download [MAC]<a> | <a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-linux.zip">Vidy Dashboard Download [Linux]<a> | <a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-win.zip">Vidy Dashboard Download [Windows]<a>
 
 ##### but can be done on the <a href = "https://dashboard.vidy.com/">Dashboard Website</a> as well.
 1. **Upload your video clips**. 
@@ -100,7 +96,7 @@ let vidy = new Vidy({
 		* Change the search to find the uploaded video you wish to embed.
 	5. Once You found the video you want, hit the ```+``` on the right corner and your video is now embeded.
 		* Your highlighted text should now be highlighted pink to signify it is now an embeded text and your a list of all your embeds on the current page will be on the right. 
-    ![embed image](../images/embed_section.png)
+    <img src = "https://i.imgur.com/MDisvbv.png">
 3. **Publish your embeded clips as Vidys live on the web**. 
 	1. If your preview is the way you want it, hit ```PUBLISH``` on the right corner of the preview section tab and you're DONE 	
 	2. Your clips have been successfully embeded as Vidys on your page and they are live on the web! To view them live, simply navigate to your page on any broswer and watch your Vidys spice up your page and watch your traffic interact with your Vidys!
@@ -113,54 +109,50 @@ let vidy = new Vidy({
 ```html
 <script>
 let vidy = new Vidy({
-  *------> appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
-           postid: 'some-unique-slug-identifier', 
+   appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // <------
+   postid: 'some-unique-slug-identifier', 
   ....
 	</script>
 ```
-The ```appid``` field in the Vidy constructor is the same APP ID that is found on your Vidy Dashboard.
+The **appid** field in the Vidy constructor is the same APP ID that is found on your Vidy Dashboard.
 
-The ```appid``` is used to group pages together into a single application. Simply speaking, an **APPLICATION** is a  ***website*** and the ```appid``` is the ***website identifier*** 
+The **appid** is used to group pages together into a single application. Simply speaking, an **APPLICATION** is a  ***website*** and the **appid** is the ***website identifier*** 
 
 Examples:
 
->```js
->https://www.washingtonpost.com/
->may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
->```
+https://www.washingtonpost.com/ may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
+
 while
->```js
->https://www.nytimes.com/
->may have an appid: '9921c8e8-klmn-opqr-b456-c236181973d4'
->```
 
-The ``appid`` belongs to a specific dashboard account, therefor you cannot add Vidys to an Application (website) you do not own.
+https://www.nytimes.com/ may have an appid: '9921c8e8-klmn-opqr-b456-c236181973d4' 
 
-Similarly no one else besides you and your dashboard account can add Vidys to your Application (website) even if they possess your ```appid```
+The **appid** belongs to a specific dashboard account, therefore you cannot add Vidys to an Application (website) you do not own.
+
+Similarly no one else besides you and your dashboard account can add Vidys to your Application (website) even if they possess your **appid**
 
 #### Understanding the POSTID
 ```html
 <script>
 let vidy = new Vidy({
-         appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
-  *----> postid: 'some-unique-slug-identifier', 
+  appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
+  postid: 'some-unique-slug-identifier', // <------
   ....
 	</script>
 ```
 
-The ```postid``` is the page identifier. Each page of a website must have their own **UNIQUE** ```postid```.
+The **postid** is the page identifier. Each page of a website must have their own **UNIQUE** **postid**.
 
->if we continue from our above examples
->```js
->https://www.washingtonpost.com/
->may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
->
->and  page from the WashingtonPost website:
->
->https://www.washingtonpost.com/opinions/2019/01/31/what-democrats-are->missing/?utm_term=.b26d79555a08
->may have postid: 'what-democrats-are-missing'  <------ UNQIUE POSTID
->
->```
+If we continue from our above examples
+
+https://www.washingtonpost.com/ may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
+
+and  page from the WashingtonPost website:
+
+https://www.washingtonpost.com/opinions/2019/01/31/what-democrats-are->missing/?utm_term=.b26d79555a08
+
+may have postid: 'what-democrats-are-missing'  <------ UNQIUE POSTID
+
+
 
 yielding this page's HTML script for Vidy instantiation to look like:
 >```html
@@ -175,11 +167,10 @@ yielding this page's HTML script for Vidy instantiation to look like:
 >```
 
 ***A different Page from the same website, WashingtonPost***
->```js
->https://www.washingtonpost.com/business/2019/01/31/an-angry-historian-ripped-ultra-rich-over-tax-avoidance-davos-then-one-was-given-mic/?utm_term=.638ecb85827a
->may have a postid:"ultra-rich-over-tax" <--- POSTID
->
->```
+
+https://www.washingtonpost.com/business/2019/01/31/an-angry-historian-ripped-ultra-rich-over-tax-avoidance-davos-then-one-was-given-mic/?utm_term=.638ecb85827a
+
+may have a postid:"ultra-rich-over-tax" <--- POSTID
 
 yielding this page's HTML script for Vidy instantiation to look like:
 >```html
@@ -193,7 +184,7 @@ yielding this page's HTML script for Vidy instantiation to look like:
 ></script>
 >```
 
-In the examples above, notice how the two different pages share the same **```appid```** because they from the same website. However, each of the page's **```postid```** is ***unique*** causing they're Vidy instantiation **```postid```** to be different
+In the examples above, notice how the two different pages share the same **appid** because they from the same website. However, each of the page's **postid** is ***unique*** causing they're Vidy instantiation **postid** to be different
 
 #### APPID, POSTID, and Content API GUIDELINE
 #### appid:
