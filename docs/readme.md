@@ -66,8 +66,8 @@ let vidy = new Vidy({
   content: '#article', //optional field: location of content
   // in html doc
   autoload: true
-  });
-	</script>
+});
+</script>
 ```
 ##### With these scripts added to your page HTML, Vidy SDK integration is complete for your page. 
 
