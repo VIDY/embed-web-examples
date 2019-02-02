@@ -19,7 +19,198 @@
 
 <div align="center">The JavaScript SDK for Vidy Embeds</div>
 
-## Install
+
+# Table of Contents:
+* [Usage](#usage)
+	* [Register](#1-register-with-vidy-and-create-a-dashboard-account)
+	* [Install](#2-install-the-vidy-sdk-onto-your-page)
+	* [Embed and Publish](#3-embed-and-publish-vidys-onto-a-page)
+* [Application ID and PostID](#application-id-and-postid)
+* [Dynamic Vidy SDK installation](#advanced-dynamic-installation)
+  * :bulb: [Examples](https://github.com/VIDY/embed-web-examples)!
+  * [API](#api)
+* [Browser Support](#browser-support)
+
+
+
+## Usage
+To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
+### 1. Register with Vidy and Create a Dashboard Account
+* <a href = 'https://dashboard.vidy.com/register'>Register Link</a>
+* Once registered, visit your dashboard
+	*  <a href = "https://dashboard.vidy.com/">Dashboard Link</a>
+*  Create a new Application (**APP**) and give it a name.
+	* Take note of the **app id** that is created, however all of your **app ids** can be found on the settings section under ```APPLICATIONS``` 
+	 * <a href="https://dashboard.vidy.com/settings/applications">Settings/applications link</a>
+   * NOTE: You can create and maintain more than one Application at a time.
+* Visit [Application ID and PostID](#application-id-and-postid) for the importance of the APP_ID and PostID
+### 2. Install the Vidy SDK onto your page.
+
+*****This is a a very simple, one page, integration setup with the purpose of gaining general understanding of the SDK. For more dynamic and advanced intergration methods of the SDK onto pages who's text is rendered dynamically or after SDK script execution please visit [Advanced Dynamic Installation](#advanced-dynamic-installation)*****
+
+***basic setup***
+ 1. Install the Vidy SDK script directly into your HTML
+ 
+ ```html 
+ <script src="https://unpkg.com/@vidy/embed/dist/embed.min.js"></script>
+ ```
+> This registers the `Vidy` constructor globally.
+
+2. Create an instance of Vidy. Simply put: start Vidy on your page
+ 
+```html
+<script>
+let vidy = new Vidy({
+  appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // USE YOUR APPID  
+  postid: 'some-unique-slug-identifier', //page identifier
+  content: '#article', //optional field: location of content
+  // in html doc
+  autoload: true
+});
+</script>
+```
+##### With these scripts added to your page HTML, Vidy SDK integration is complete for your page. 
+
+**NOTES** 
+
+1. _This basic installation assumes your text content exists on your page when the Vidy instance is created_
+2. Your **appid** and **postid** are critical to the successful integration of the Vidy SDK. Please Visit [Application ID and PostID](##Application-ID-and-POSTID) for a detailed explanation of these options.   
+	
+### 3. Embed and Publish Vidys onto a Page
+#####  This works much better with the Vidy Dashboard desktop app
+<a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-mac.zip">Vidy Dashboard Download [MAC]<a> | <a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-linux.zip">Vidy Dashboard Download [Linux]<a> | <a href="https://vidy-app.s3.amazonaws.com/production/latest/Vidy-0.2.11-win.zip">Vidy Dashboard Download [Windows]<a>
+
+##### but can be done on the <a href = "https://dashboard.vidy.com/">Dashboard Website</a> as well.
+1. **Upload your video clips**. 
+	1. visit the upload section of your dashboard and upload your videos. 
+		* This can be found under the Upload section of the Desktop app or <a href="https://dashboard.vidy.com/upload/info">Upload Section</a> on the web. 
+		* Upload your Video, Enter the title, tags, and subtitle information for the video. These must be filled out as these will be used to search for the uploaded video at embed time. 
+		![upload section image](../images/Upload_section.png)
+2. **Embed your videos**
+	1. Visit the ```Preview``` section of the your dashboard and enter your page URL at the top
+	   * <a href="https://dashboard.vidy.com/preview">Preview Section Link</a> for web
+	2. Highlight the text on your page you wish to embed
+		* The search bar (on the left) will be immediately populated with the highlighted text.
+		* Change the search to find the uploaded video you wish to embed.
+	3. Once You found the video you want, hit the ```+``` on the right corner and your video is now embeded.
+		* Your highlighted text should now be highlighted pink to signify it is now an embeded text and your a list of all your embeds on the current page will be on the right. 
+    <img src = "https://i.imgur.com/MDisvbv.png" width="600px">
+3. **Publish your embeded clips as Vidys live on the web**. 
+	1. If your preview is the way you want it, hit `PUBLISH` on the right corner of the preview section tab and you're DONE 	
+	2. Your clips have been successfully embeded as Vidys on your page and they are live on the web! To view them live, simply navigate to your page on any broswer and watch your Vidys spice up your page and watch your traffic interact with your Vidys!
+
+
+
+
+## Application ID and POSTID
+
+#### Understanding the APP ID
+```html
+<script>
+let vidy = new Vidy({
+  appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // <------
+  postid: 'some-unique-slug-identifier',
+  // ...
+});
+</script>
+```
+
+The **appid** field in the Vidy constructor is the same APP ID that is found on your Vidy Dashboard.
+
+The **appid** is used to group pages together into a single application. Simply speaking, an **APPLICATION** is a  ***website*** and the **appid** is the ***website identifier*** 
+
+Examples: (FAKE VALUES)
+
+* `https://www.washingtonpost.com/`'s appid may be `2199e8c8-abcd-efgh-a123-d463129790c5`
+* `https://www.nytimes.com/`'s appid may be `9921c8e8-klmn-opqr-b456-c236181973d4`
+
+The **appid** belongs to a specific account, which means that you cannot add Vidys to an Application (aka, website) that you do not own. Similarly, others cannot add or modify Vidys on _your_ Application – even if they know your **appid** value!
+
+#### Understanding the POSTID
+```html
+<script>
+let vidy = new Vidy({
+  appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
+  postid: 'some-unique-slug-identifier', // <------
+  // ...
+});
+</script>
+```
+
+The **postid** is the page identifier. Each page of a website must have their own **UNIQUE** **postid**.
+
+If we continue from our above examples:
+
+`https://www.washingtonpost.com/` may have an appid: '2199e8c8-abcd-efgh-a123-d463129790c5'
+
+and a page from the WashingtonPost website:
+
+`https://www.washingtonpost.com/opinions/2019/01/31/what-democrats-are->missing/?utm_term=.b26d79555a08` may have postid: `'what-democrats-are-missing'`  <------ UNQIUE POSTID
+
+
+
+The Vidy SDK script for this page might look like this:
+
+```html
+<script>
+  let vidy = new Vidy({
+    appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // Washington Post's APPID  
+    postid: 'what-democrats-are-missing', // the UNIQUE page identifier
+  });
+</script>
+```
+
+***A different Page from the same website, WashingtonPost***
+
+`https://www.washingtonpost.com/business/2019/01/31/an-angry-historian-ripped-ultra-rich-over-tax-avoidance-davos-then-one-was-given-mic/?utm_term=.638ecb85827a`
+
+may have a postid: `'ultra-rich-over-tax'` <--- POSTID
+
+The Vidy SDK script for this page might look like this:
+
+```html
+<script>
+  let vidy = new Vidy({
+    appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // Washington Post's APPID  
+    postid: 'ultra-rich-over-tax', // the UNIQUE page identifier
+  });
+</script>
+```
+
+In the examples above, notice how the two different pages share the same **appid** because they from the same website. However, each of the page's **postid** is ***unique*** causing they're Vidy instantiation **postid** to be different
+
+##### IMPORTANT POSTID FACTS
+* Once your postid for a page is set and vidys are embeded onto a page, do not change the postid. Doing so will result in a loss of your vidy embeds. 
+* The postid should be IMMUTABLE, meaning never changing once it has been set for a page. 
+* There cannot be two identical postid under the same application.
+* The postid can be numbers or text (see below)
+
+#### APPID, POSTID, and Content API GUIDELINE
+#### appid:
+Type: `String`<br>
+Required: `true`
+
+The Application (website) identifier.<br>
+Created and or found on the Vidy Dashboard
+
+#### postid:
+Type: `String|Number`<br>
+Required: `true`
+
+The unique identifier for any given page.
+
+Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary. However, a change in your pages url will result in a different postid if ```location.pathname``` is used and ultimately a loss of that pages Vidy embeds. 
+
+***POSTID and APPID combination are what allows for the SDK to find the Vidys associated to each page.***
+
+#### content
+Type: String<br>
+Default: 'body'
+
+The html selector of the parent container that wraps the text content Vidy should traverse.
+
+
+## Advanced Dynamic Installation
 
 ```
 $ npm install --save @vidy/embed
@@ -35,33 +226,7 @@ import Vidy from '@vidy/embed';
 const Vidy = require('@vidy/embed');
 ```
 
-You may also use the [UMD](https://github.com/umdjs/umd) build within a `<script>` tag if you'd prefer:
-
-```html
-<script src="https://unpkg.com/@vidy/embed/dist/embed.min.js"></script>
-```
-
-> This registers the `Vidy` constructor globally.
-
-
-## Usage
-
 :bulb: Looking for examples? [We got you covered](https://github.com/VIDY/embed-web-examples)!
-
-***Basic Setup***
-
-_This assumes text content exists at time of instantiation._
-
-```js
-import Vidy from '@vidy/embed';
-
-let vidy = new Vidy({
-  appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
-  postid: location.pathname, //=> eg "hello-world"
-  content: '#article',
-  autoload: true
-});
-```
 
 ***Dynamic Setup &mdash; AKA, no autoload***
 
