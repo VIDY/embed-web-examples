@@ -204,7 +204,10 @@ Required: `true`
 
 The unique identifier for any given page.
 
-Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary. However, a change in your pages url will result in a different postid if ```location.pathname``` is used and ultimately a loss of that pages Vidy embeds. 
+Most web frameworks have built-in helpers to generate & ensure unique page identifiers; You may also resort to using the ```location.pathname```, if necessary
+
+> **location.pathname** is the pages url pathname. a fake example: www.mywebsite.com/some-page-name, if the postid is set to
+location.pathname, the postid will be "some-page-name". A change in the page url will cause a change in the postid. The postid should never change once it has been set for a page, using location.pathname is not recommended as a change in the page URL will cause a lost of that pages Vidy Embeds.
 
 ***POSTID and APPID combination are what allows for the SDK to find the Vidys associated to each page.***
 
@@ -284,10 +287,6 @@ Required: `true`
 The unique identifier for any given page.
 
 Most web frameworks have built-in helpers to generate & ensure unique page identifiers; see [some examples](https://github.com/VIDY/embed-web-examples) for help. You may also resort to using the `location.pathname`, if necessary.
-
-> **location.pathname** is the pages url pathname. a fake example: www.mywebsite.com/some-page-name, if the postid is set to
-location.pathname, the postid will be "some-page-name". A change in the page url will cause a change in the postid. The postid should never change once it has been set for a page, using location.pathname is not recommended as a change in the page URL will cause a lost of that pages Vidy Embeds.
-
 
 > **Important:** This should be immutable; each `postid` yields its own specific list of Vidy Embeds!
 
