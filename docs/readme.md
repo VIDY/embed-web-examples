@@ -39,7 +39,10 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
 * <a href = 'https://dashboard.vidy.com/register'>Register Link</a>
 * Once registered, visit your dashboard
 	*  <a href = "https://dashboard.vidy.com/">Dashboard Link</a>
-*  Create a new Application (**APP**) and give it a name.
+*  Create a new PUBLISHER organization. 
+    * Once your request to become a publisher with Vidy is made, we will review it and approve it. 
+    * You can proceed to integration once your Publisher organization has been approved.
+*  After your Publisher organization has been approved, Create a new Application (**APP**) and give it a name.
 	* Take note of the **app id** that is created, however all of your **app ids** can be found on the settings section under ```APPLICATIONS``` 
 	 * <a href="https://dashboard.vidy.com/settings/applications">Settings/applications link</a>
    * NOTE: You can create and maintain more than one Application at a time.
