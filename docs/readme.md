@@ -55,7 +55,7 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
  1. Install the Vidy SDK script directly into your HTML
  
  ```html 
- <script src="https://unpkg.com/@vidy/embed/dist/embed.min.js"></script>
+ <script src="https://static.vidy.com/embed.min.js"></script>
  ```
 > This registers the `Vidy` constructor globally.
 
@@ -66,7 +66,7 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
 let vidy = new Vidy({
   appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // USE YOUR APPID  
   postid: 'some-unique-slug-identifier', //page identifier
-  content: '#article', //optional field: location of content
+  content: '#article', //manditory field: location of content
   // in html doc
   autoload: true
 });
@@ -253,7 +253,7 @@ let pathname = location.pathname; //=> eg "hello-world"
 let vidy = new Vidy({
   appid: '2199e8c8-abcd-efgh-a123-d463129790c5',
   postid: pathname,
-  content: selector
+  content: selector //manditory field
 });
 
 // Query our own Blog API for JSON
@@ -299,7 +299,7 @@ Most web frameworks have built-in helpers to generate & ensure unique page ident
 Type: `String`<br>
 Default: `'body'`
 
-The selector of the parent container that wraps the text content Vidy should traverse.
+The selector of the parent container that wraps the text content Vidy should traverse. *This is now manditory*
 
 For example, given the following markup:
 
@@ -327,7 +327,7 @@ For example, given the following markup:
 
 By default, the Vidy SDK will grab ***all text*** on the page, including comments, related & trending post widgets, etc. You _probably_ don't want the SDK placing links in these areas.
 
-Instead, you could pass `content: '#content'`, targeting the article _and_ the comments' text; or you can narrow link placements within the article exclusively via the `'#content > article'` selector.
+Instead, you could pass `content: '#content'`, targeting the article _and_ the comments' text; or you can narrow link placements within the article exclusively via the `'#content > article'` selector. 
 
 #### options.autoload
 
