@@ -63,12 +63,15 @@ To use the Vidy SDK to embed Vidys onto your page, there are 3 main steps:
  
 ```html
 <script>
+  
+document.addEventListener("DOMContentLoaded", function(event) {
 let vidy = new Vidy({
   appid: '2199e8c8-abcd-efgh-a123-d463129790c5', // USE YOUR APPID  
   postid: 'some-unique-slug-identifier', //page identifier
   content: '#article', //manditory field: location of content
   // in html doc
   autoload: true
+  });
 });
 </script>
 ```
